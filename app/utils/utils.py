@@ -40,7 +40,6 @@ def get_alhpa_vantage_news(search_date = '20240510', search_topic=None, search_s
     # get all news
     prefix = 'alpha_vantage/2024-05-11/news/'
     data_list = read_data('transformed', prefix)
-    print('get data')
 
     filtered = []
     for data in data_list:
@@ -114,8 +113,6 @@ def show_news(list_news, number_of_news_per_column = 2):
         i+=1
 
 
-# Assume this function communicates with a backend that uses OpenAI to generate content.
-@st.cache_resource
 def fetch_generated_content(collection, filter_dict, prompt):
     import chromadb
     import openai
@@ -151,6 +148,7 @@ def fetch_generated_content(collection, filter_dict, prompt):
     retriever = VectorIndexRetriever(
         index=index,
         filters=filters,
+        similarity_top_k = 100
     )
 
     # configure response synthesizer

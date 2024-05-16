@@ -1,1 +1,1 @@
-Generate a concise summary within 500 words.
+Summarize the information gathered from the retriever in 500 words or less. Each sentence should start with subject of the article and indicate information that are useful to stock market.
