@@ -25,3 +25,16 @@ Storage Performance: Ensure that the storage used by consumers (if they store da
 7. Effective Error Handling
 Retry Logic: Implement robust retry mechanisms for handling consumption failures.
 Dead Letter Queues: Use dead letter queues for messages that cannot be processed after several attempts.
+
+
+1. Deleting the Topic
+
+Change the setting of message retention time
+kafka-configs --bootstrap-server your-kafka-server:9092 --entity-type topics --entity-name your-topic-name --alter --add-config retention.ms=86400000
+
+Navigate to your Kafka installation directory and run the following command to delete a topic:
+kafka-topics --bootstrap-server broker:29092 --list
+kafka-topics --bootstrap-server broker:29092 --delete --topic alpha_vantage_news
+
+reset offset
+bin/kafka-consumer-groups --bootstrap-server broker:29092 --group consumer-group-1 --reset-offsets --shift-by -6 --topic yfinance_data -execute --group consumer-group-1
