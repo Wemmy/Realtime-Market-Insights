@@ -148,7 +148,7 @@ def fetch_generated_content(collection, filter_dict, prompt):
     retriever = VectorIndexRetriever(
         index=index,
         filters=filters,
-        similarity_top_k = 100
+        similarity_top_k = 20
     )
 
     # configure response synthesizer

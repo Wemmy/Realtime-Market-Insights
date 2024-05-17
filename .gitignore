@@ -7,3 +7,5 @@ logs/
 .env
 docker-compose-test.yml
 page2.py
+page3.py
+test.py
