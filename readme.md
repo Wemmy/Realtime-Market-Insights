@@ -1,6 +1,6 @@
  <div align="center">
   <p>
-      <img src="https://github.com/Wemmy/Realtime-Market-Insights.git/ETL.png"></a>
+      <img src="https://github.com/Wemmy/Realtime-Market-Insights/blob/27b81e721ea4ac9b5f6597c01d22a4bfacd9371d/ETL.png"></a>
   </p>
 </div>
 
